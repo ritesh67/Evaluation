@@ -1,0 +1,1234 @@
+-> What is C programming and why is it called procedure oriented language.
+C is a procedural programming lanuguage with static sytem that has recursion and lexical variable scoping(setting up range of a variable range so that it is called from within the block of code. It also follows the process of recursion.Now c is a procedural programming lanuguage because ot folows certain procedures called functions(collection of data and commands). There is no access speicifier in c so it is not that secure.   
+->What is Cpp and what is its history.
+Cpp is a middle level lanuguage free form language that supports procedural,object oriented and generic programming.
+-> Explain the basic structure of cpp programming.
+AMERICAN NATIONAL STANDARD INSTITUTE
+Header file supporting thing for compiler 
+#is a preprocessor 
+using namespace std is standard namespace;
+
+-> Basic arithimetic operations;
+
+#include <bits/stdc++.h>
+using namespace std;
+ 
+int main() {
+    int a,b;
+    cout<<"enter two numbers"<<endl;
+    cin>>a>>b;
+    cout<<"which operation do you want to perform?"<<endl;
+    int n;
+    cout<<"1.Addition"<<endl<<"2.Subtraction"<<endl<<"3.Product"<<endl<<"4.Division"<<endl;
+    cin>>n;
+    if(n==1){
+        cout<<a+b<<endl;
+    }
+    else if(n==2){
+        cout<<a-b<<endl;
+    }
+    else if(n==3){
+        cout<<a*b<<endl;
+    }
+    else if(n==4){
+        cout<<a/b<<endl;
+    }
+    else{
+        cout<<"please enter correct value"<<endl;
+    }
+    return 0;
+}
+
+
+---------------------
+#include <iostream>
+
+using  namespace std;
+ 
+int main()
+
+{
+
+    int num1,num2,choice;
+
+    cout << "Enter your First number: ";
+
+    cin>>num1;
+
+    cout<<"Enter Second Number: ";
+
+    cin>>num2;
+
+    cout<<"Enter the Operation to be performed:"<<endl;
+
+    cout<<"1.Addition"<<endl;
+
+    cout<<"2.Subtraction"<<endl;
+
+    cout<<"3.Multiplication"<<endl;
+
+    cout<<"4.Division"<<endl;
+
+    cin>> choice;
+
+    switch (choice)
+
+    {
+
+    case 1:
+
+        cout<<"Addition of "<< num1<<" and "<<num2 <<"  is "<<num1+num2;
+
+    break;
+
+    case 2:
+
+        cout<<"Subtraction of "<< num1<<" and "<<num2  <<" is "<<num1-num2;
+
+    break;
+
+    case 3:
+
+        cout<<"Multiplicationtion of "<< num1<<" and "<<num2  <<" is "<<num1*num2;
+
+    break;
+
+    case 4:
+
+    cout<<"Division of "<< num1<<" and "<<num2 <<" is "<<num1/num2;
+
+    break;
+
+    default:
+
+    cout<<"Enter Correct Option";
+
+    break;
+
+}
+
+
+    return 0;
+
+}
+ 
+
+globally declaring the variable is done using EXTERN keyword
+
+
+
+----------------------------
+#include <bits/stdc++.h>
+using namespace std;
+ 
+int main() {
+  cout<<"size of char:"<<sizeof (char)<<endl;
+  cout<<"size of int:"<<sizeof (int)<<endl;
+  cout<<"size of short:"<<sizeof (short)<<endl;
+  cout<<"size of long:"<<sizeof (long)<<endl;
+  return 0;
+}
+-----------------------------
+#include <iostream>
+using namespace std;
+
+#define Length 30
+#define Width  10
+#define NEWLINE '\n'
+int main (){
+    int area ;
+    area = Length * Width;
+    cout<<area;
+    cout<<NEWLINE;
+    return 0;
+}
+---------------------------
+->Difference between logical and bitwise operator
+-> enter 5 subject marks calculate the total and take the percentage 
+
+
+#include<bits/stdc++.h>
+using namespace std;
+ 
+ 
+int main(){
+    int sub1,sub2,sub3,sub4,sub5;
+    cout<<"Enter marks for subject 1 : ";
+    cin>>sub1;
+    cout<<"Enter marks for subject 2 : ";
+    cin>>sub2;
+    cout<<"Enter marks for subject 3 : ";
+    cin>>sub3;
+    cout<<"Enter marks for subject 4 : ";
+    cin>>sub4;
+    cout<<"Enter marks for subject 5 : ";
+    cin>>sub5;
+    int sum=sub1+sub2+sub3+sub4+sub5;
+    double perc=sum/5.00;
+    cout<<endl<<"Your percentage is : "<<perc;
+
+    return 0;
+}
+-> Do while loop 
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    int i = 0;
+    string s = "soham jha 2";
+    
+ do  { 
+        cout << s << endl;
+        i++; 
+    }while (i < 5);
+    
+    return 0;
+}
+---------------------------
+#include <iostream>
+
+using namespace std;
+ 
+int main()
+
+{
+
+    int i = 1;
+
+    while (i<6){
+
+        cout<<"Hello Amdocs-"<<i<<endl;
+
+        i+=1;
+
+    }
+
+    i=-2;
+
+    do{
+
+        cout<<"Sorry it's a negative number"<<endl;
+
+    }while(i>0);
+
+ 
+    return 0;
+
+}
+----------------
+
+ ->Enter the number and print table for that 
+#include<bits/stdc++.h>
+using namespace std;
+ 
+ 
+int main(){
+    cout<<"Enter the number : ";
+    int n;
+    cin >>n;
+    int i = 1;
+    while (i<=10){
+    cout<<i*n<<endl;
+    i++;
+}
+    return 0;
+}
+-------------------
+->Conditional statement 
+
+
+-> Console Based Project no database Creat Update Delete 
+
+
+
+-----------------------------------------
+
+Auto decides the datatype in accordance with the value given to it be it string or num or anyhting else.9:45 AM 11/26/20249:45 AM 11/26/2024
+decltype & auto used for assigning and fetching datatype of a a declared variable or function .
+
+->What is the concept of pointer in c 
+datatype *ptr = &variable
+pointer declaration in cpp
+%p= pointer address %d= hexadecimal value 
+
+(daggling pointer concept uses)
+->Use pointer in cpp
+swapping in cpp
+// C program to demonstrate Deallocating a memory pointed by
+// ptr causes dangling pointer
+#include <bits/stdc++.h>
+using namespace std;
+
+void swap  (int*x,int*y)
+{
+int z=*x;
+*x=*y;
+*y = z;
+}
+int main()
+{
+    int a = 50 , b = 60;
+    cout<<"before swap\n";
+    cout<<"a= "<<a<<"b="<<b<<"\n";
+    swap(&a,&b);
+    cout<<"after swap\n";
+    cout<<"a="<<a<<"b="<<b<<"\n";
+    
+    return 0;
+}
+
+
+->STRUCTURE
+// C program to demonstrate Deallocating a memory pointed by
+// ptr causes dangling pointer
+#include <bits/stdc++.h>
+using namespace std;
+
+struct rectangle
+{
+    int width ,Length;
+}; 
+int main(void){
+    struct rectangle rec;
+    rec.Length;
+    cin>>rec.Length;
+    rec.width ;
+    cin>>rec.width;
+    cout<<"the area of Recatngle is: "<<(rec.width*rec.Length)<<endl;
+    return 0 ;
+}
+
+STRUCTURE EMPLOYEE INFO AND ADD EMPLOYEE DETAILS TO IT
+------------------------------------------------------
+Classes 
+Class is a detailed description, the definition, and the template of what an object will be whereas an object is an instance in the class by virtue of which we can fetch any data.
+default access modifier for class is private.
+
+#include <iostream>
+using namespace std;
+ 
+ 
+class Employee{
+    public:
+    int empid ;
+    string empname ;
+    string city;
+
+    
+    
+};
+int main(){
+     Employee e1;
+    e1.empid = 207449;
+    e1.empname = "Soham";
+    e1.city = "Pune";
+    cout<<e1.empid<<endl;
+    cout<<e1.empname<<endl;
+    cout<<e1.city<<endl;
+    return 0;
+}
+----------------------
+Inheritance in cpp
+object of child class can acquire the properties of parent class.
+#include <iostream>
+using namespace std;
+ 
+ 
+class Account{
+    public:
+    int salary = 6500;
+};
+class employee: public Account{
+    public: 
+    float bonus = 5000;
+};
+int main(void){
+    employee e1;
+    cout<<"the salary is "<<e1.salary<<endl;
+    cout<<"the bonus is"<<e1.bonus<<endl;
+    return 0;
+}
+
+Multilevel 
+#include <iostream>
+using namespace std;
+ 
+ 
+class Account{
+    public:
+    int salary = 6500;
+};
+class employee: public Account{
+    public: 
+    float bonus = 5000;
+    float pfamount= 20000;
+};
+
+class extraa : public employee{
+    public:
+    double espp = 123.44; 
+};
+
+int main(void){
+    employee e1;
+    cout<<"the salary is "<<e1.salary<<endl;
+    cout<<"the bonus is"<<e1.bonus<<endl;
+    extraa ex1;
+    cout<<"the pf is"<<ex1.espp<<endl;
+    return 0;
+}
+------------------------------------------
+Mulitple
+#include <iostream>
+using namespace std;
+ 
+ 
+class Account{
+    public:
+    int salary = 6500;
+};
+class employee{
+    public: 
+    string name = "bond, james bond";
+};
+
+class extraa : public Account,public employee{
+    public:
+    double espp = 123.44; 
+};
+
+int main(void){
+    extraa e1;
+    cout<<"the salary is "<<e1.salary<<endl;
+    cout<<"the name is "<<e1.name<<endl;
+    cout<<"the pf is"<<e1.espp<<endl;
+    return 0;
+}
+------------------------
+#include <iostream>
+
+using namespace std;
+ 
+class Dada{
+
+    public:
+
+    void takeBadla()
+
+    {
+
+        cout<<"Dada ka"<<endl;
+
+    }
+
+};
+ 
+class Baap : public Dada{
+
+  public:
+
+    void takebadla()
+
+    {
+
+        cout<<"Baap ka"<<endl;
+
+    }
+
+};
+ 
+class Faizal : public Baap{
+
+    public:
+
+     void finalBadla()
+
+     {
+
+         cout<<"Sab ka Badla lega re tera Fizal"<<endl;
+
+     }
+
+};
+ 
+int main()
+
+{
+
+    Faizal fz;
+
+    fz.takeBadla();
+
+    fz.takebadla();
+
+    fz.finalBadla();
+
+}
+
+-----------------------------------------
+->Hierarchical Inheritance
+#include <iostream>
+using namespace std;
+ 
+ 
+class Account{
+    public:
+    int money = 65000;
+};
+class employee:public Account{
+    public: 
+    string name = "jadoo";
+};
+
+class extraa : public employee{
+    public:
+    double espp = 123.44; 
+};
+
+int main(void){
+    employee e1;
+    cout<<"the salary is "<<e1.money<<endl;
+    cout<<"the bonus is "<<e1.name<<endl;
+    extraa ex1;
+    cout<<"the pf is"<<ex1.espp<<endl;
+    return 0;
+}
+--------------------------------------------------------
+-> hybrid inheritance 
+#include <iostream>  
+using namespace std;  
+class vehicle  
+{  
+public:  
+vehicle()  
+    {  
+cout<< "This is a vehicle\n";  
+    }  
+};  
+class Car: public vehicle  
+{  
+public:  
+Car()  
+    {  
+cout<< "This is a car\n";  
+    }  
+};  
+class Racing  
+{  
+public:  
+Racing()  
+    {  
+cout<< "This is for Racing\n";  
+    }  
+};  
+class Ferrari: public Car, public Racing  
+{  
+public:  
+Ferrari()  
+    {  
+cout<< "Ferrari is a Racing Car\n";  
+    }  
+};  
+int main() {  
+    Ferrari f;  
+    return 0;  
+}  
+
+-------------------------
+->program to calculate the area of square , rectangle , triangle , circle using switch case
+
+
+#include <iostream>
+
+using  namespace std;
+ 
+int main()
+
+{
+
+    int num1 ,num2,choice,Arectangle,Asquare,Acircle,Atriangle;
+
+    cout << "Enter your First number: ";
+
+    cin>>num1;
+
+    cout<<"Enter Second Number: ";
+
+    cin>>num2;
+
+    cout<<"Enter the Operation to be performed:"<<endl;
+
+    cout<<"1.Rectangle"<<endl;
+
+    cout<<"2.Square"<<endl;
+    
+    cout<<"3.Circle"<<endl;
+    cout<<"4.Traingle"<<endl;
+
+
+    cin>> choice;
+
+    switch (choice)
+
+    {
+
+    case 1:
+        Arectangle = num1*num2;
+        cout<< Arectangle;
+
+    break;
+
+    case 2:
+        Asquare = num1*num1;
+        cout<<Asquare;
+
+    break;
+     case 3:
+        Acircle = 3.142*(num1*num1);
+        cout<<Acircle;
+
+    break;
+     case 4:
+        Atriangle = 0.5*(num1*num2);
+        cout<<Atriangle;
+        break;
+
+    default:
+
+    cout<<"Enter Correct Option";
+
+    break;
+
+}
+
+
+    return 0;
+
+}
+------------------------------------
+#include<bits/stdc++.h>
+#define pi 22/7
+using namespace std;
+ 
+int main(){
+    cout<<"1. Square"<<endl<<"2. Rectangle"<<endl<<"3. Triangle"<<endl<<"4. Circle"<<endl;
+    cout<<"Enter shape : ";
+    int n;
+    cin>>n;
+    switch(n){
+        case 1: 
+        {
+            cout<<"enter side: ";
+            int s;
+            cin>>s;
+            cout<<endl<<"area of the square is : "<<s*s<<endl;
+            break;
+        }
+        case 2:
+        {
+            cout<<"enter length: ";
+            int l;
+            cin>>l;
+            cout<<endl<<"enter breadth: ";
+            int b;
+            cin>>b;
+            cout<<endl<<"area of the rectangle is : "<<l*b<<endl;
+            break;
+        }
+        case 3:
+        {
+            cout<<"enter base : ";
+            int x;
+            cin>>x;
+            cout<<endl<<"enter height : ";
+            int y;
+            cin>>y;
+            float area=(0.5*x*y);
+            cout<<endl<<"area of the triangle is : "<<area<<endl;
+            break;
+        }
+        case 4:
+        {
+            cout<<"enter radius: ";
+            int r;
+            cin>>r;
+            cout<<endl<<"area of the circle is : "<<pi*r*r<<endl;
+            break;
+        }
+        default: {
+            cout<<"please enter correct number!!"<<endl;
+            break;
+        }
+    }
+    return 0;
+}
+
+-----------------------------
+->Write a cpp program to print all armstrong numbers between 10 to thousand
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main() {
+
+  int num1, num2, i, num, digit, sum, count;
+
+  cout << "Enter first number: ";
+  cin >> num1;
+
+  cout << "Enter second number: ";
+  cin >> num2;
+
+  // swap if num1 > num2
+  if (num1 > num2) {
+    num1 = num1 + num2;
+    num2 = num1 - num2;
+    num1 = num1 - num2;
+  }
+  
+  cout << "Armstrong numbers between " << num1 << " and " << num2 << " are: " << endl;
+ 
+  // print Armstrong numbers from num1 to num2
+  for(i = num1; i <= num2; i++) {
+
+    // count gives the number of digits in i
+    count = 0;
+         
+    // store value of i in num
+    num = i;
+
+    // count the number of digits in num and i
+    while(num > 0) {
+      ++count;
+      num /= 10;
+    }
+ 
+    // initialize sum to 0
+    sum = 0;
+
+    // store i in num again    
+    num = i;
+        
+    // get sum of power of all digits of i
+    while(num > 0) {
+      digit = num % 10;
+      sum = sum + pow(digit, count);
+      num /= 10;
+    }
+
+    // if sum is equal to i, then it is Armstrong
+    if(sum == i) {
+      cout << i << ", ";
+    }
+  }
+
+  return 0;
+}
+
+---------------------
+->cpp To check whether the entered string is pallindrome or not
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+void checkPalindrome(const string& str) {
+    string rev = str;
+    reverse(rev.begin(), rev.end());
+
+    if (str == rev) {
+        cout << "\"" << str << "\" is a palindrome." << endl;
+    } else {
+        cout << "\"" << str << "\" is NOT a palindrome." << endl;
+    }
+}
+
+int main() {
+    string input;
+    cout << "Enter a string: ";
+    cin >> input;
+
+    checkPalindrome(input);
+
+    return 0;
+}
+
+
+
+-------------------------------
+-> containers in cpp
+
+Sequence containers:-array,vector,dequeue,forward_list,list
+Associative containers:-Set,Map,Multiset,multimap
+
+ #include <bits/stdc++.h>
+using namespace std;
+
+class Rectangle {
+public:
+    int area1 = 60;
+};
+
+class Square {
+public:
+    int area2 = 79;
+};
+
+class Total {
+public:
+    int total;
+
+    Total(Rectangle r, Square s) {
+        total = r.area1 + s.area2;
+    }
+};
+
+int main() {
+    Rectangle r;
+    Square s;
+    Total t(r, s);
+
+    cout << "The area of rectangle is " << r.area1 << endl;
+    cout << "The area of square is " << s.area2 << endl;
+    cout << "The total area is " << t.total << endl;
+
+    return 0;
+}
+
+
+--------------------------------------------------------
+-> create a bank class to deposit and add money ;
+#include <iostream>
+using namespace std;
+ 
+class Bank{
+    public :
+    float balanace=1000.0;
+    int deposit(int money)
+    {
+        balanace +=money;
+        return balanace;
+    }
+    int withdraw(int money)
+    {
+        balanace-=money;
+        return balanace;
+    }
+};
+ 
+int main()
+{
+    Bank b;
+    int choice;
+    float amount;
+    cout<<"Enter which operation to be performed:"<<endl;
+    cout<<"1) Deposit Money"<<endl;
+    cout<<"2)Withdraw Money"<<endl;
+    cin>>choice;
+    switch (choice){
+        case 1:
+            cout<<"Enter Amount to be Deposited: ";
+            cin>>amount;
+            // b.deposit(amount);
+            cout<<"Your Current Balance is "<<b.deposit(amount)<<"rs.";
+            break;
+        case 2:
+            cout<<"Enter Amount to be Withdrawn: ";
+            cin>>amount;
+            // b.Withdrawn(amount);
+            cout<<"Your Current Balance is "<<b.withdraw(amount)<<"rs.";
+            break;
+        default:
+            cout<<"Enter Correct Choice";
+            break;
+}
+}
+
+->using the loops checking for a prime number
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int isPrime(int n) {
+    if (n <= 1) {
+        return 0; // Not prime
+    }
+    for (int i = 2; i <= sqrt(n); i++) {
+        if (n % i == 0) {
+            return 0; // Not prime
+        }
+    }
+    return 1; // Prime
+}
+
+int main() {
+    int num;
+    cout << "Enter a number: ";
+    cin >> num;
+
+    if (isPrime(num) == 1) {
+        cout << num << " is a prime number." << endl;
+    } else {
+        cout << num << " is not a prime number." << endl;
+    }
+
+    return 0;
+}
+->CALL BY VALUE
+#include <iostream>
+using namespace std;
+ 
+void change(int data);
+ 
+int main()
+{
+    int d = 10;
+    change(d);
+    cout<<" Value of  data is "<<d<<endl;
+    return 0;
+}
+ 
+void change(int data)
+{
+    data = 25;
+}
+
+
+
+call by referrence
+#include <iostream>
+using namespace std;
+ 
+void change(int *data);
+ 
+int main()
+{
+    int d = 10;
+    change(&d);
+    cout<<" Value of  data is "<<d<<endl;
+    return 0;
+}
+ 
+void change(int *data)
+{
+    *data = 25;
+}
+
+
+-------------------------------
+recursion : indirect and direct
+
+
+genreate a fibonacci series for a given limit using recursion 
+
+#include <bits/stdc++.h>
+using namespace std;
+
+
+int nthFibonacci(int n){
+
+    // Base case: if n is 0 or 1, return n
+    if (n <= 1){
+        return n;
+    }
+
+    // Recursive case: sum of the two preceding Fibonacci numbers
+    return nthFibonacci(n - 1) + nthFibonacci(n - 2);
+}
+
+int main(){
+    int n;
+    cout<<"enter the number:"<<endl;
+    cin>>n;
+    int result = nthFibonacci(n);
+    cout << result << endl;
+
+    return 0;
+}
+
+----------------------------
+#include <bits/stdc++.h>
+using namespace std;
+
+
+int nthFibonacci(int n){
+
+    // Base case: if n is 0 or 1, return n
+    if (n <= 1){
+        return n;
+    }
+
+    // Recursive case: sum of the two preceding Fibonacci numbers
+    return nthFibonacci(n - 1) + nthFibonacci(n - 2);
+}
+
+int main(){
+    int n;
+    cout<<"enter the number:"<<endl;
+    cin>>n;
+    int x=n;
+    while(x>0){
+        cout<<nthFibonacci(x)<<endl;
+        x--;
+    }
+    int result = nthFibonacci(n);
+    //cout << result << endl;
+
+    return 0;
+}
+
+->generate a factorial using recursion
+#include <bits/stdc++.h>
+using namespace std;
+
+int nthFactorial(int n) {
+    // Base case: if n is 0 or 1, return 1
+    if (n == 0 || n == 1) {
+        return 1;
+    }
+    return n * nthFactorial(n - 1);
+}
+
+int main() {
+    int n;
+    cout << "Enter the number:" << endl;
+    cin >> n;
+    int result = nthFactorial(n);
+    cout << result << endl;
+
+    return 0;
+}
+
+
+---------------------------
+
+->Polymorphism 
+Poly + morphism means in different forms 
+compile time polymorphism 
+
+object overloading:
+#include <bits/stdc++.h>
+using namespace std;
+class batch{
+    public:
+    void func (int x){
+    cout<<"the value of x is:"<<x<<endl;
+}
+ void func (double x){
+    cout<<"the value of x is:"<<x<<endl;
+}
+ void func (string x){
+    cout<<"the value of x is:"<<x<<endl;
+}
+};
+int main(){
+   
+    batch obj1;
+    
+    obj1.func(7);
+    obj1.func(32.55);
+    obj1.func("bhattacharya");
+};
+
+
+
+Object overiding 
+#include <bits/stdc++.h>
+using namespace std;
+class Wall{
+    public:
+    string colour = "black";
+    
+};
+class paint:public Wall{
+    public:
+    string colour = "yellow";
+};
+int main(void){
+    paint p =paint();
+  cout<< p.colour;
+   return 0 ;
+};
+
+
+--------------------------
+Virtual Pointer
+// C++ program to illustrate
+// concept of Virtual Functions
+
+#include <iostream>
+using namespace std;
+
+class base {
+public:
+    virtual void print() { cout << "print base class\n"; }
+
+    void show() { cout << "show base class\n"; }
+};
+
+class derived : public base {
+public:
+    void print() { cout << "print derived class\n"; }
+
+    void show() { cout << "show derived class\n"; }
+};
+
+int main()
+{
+    base* bptr;
+    derived d;
+    bptr = &d;
+
+    // Virtual function, binded at runtime
+    bptr->print();
+
+    // Non-virtual function, binded at compile time
+    bptr->show();
+
+    return 0;
+}
+
+------------------------------------------------
+->Scope resolution operator 
+Uses 
+1. To access a global variable when there is a already declared global variable.
+#include<bits/stdc++.h>
+using namespace std;
+int x = 45;
+int main(){
+    int x = 38;
+    cout<<"the value of x "<<::x<<endl;
+    cout<<"the value of x "<<x<<endl;
+}
+
+2.To define a function outside a class. 
+#include<bits/stdc++.h>
+using namespace std;
+
+class CLA{
+    public:
+void func();
+};
+void CLA::func() {cout<<"func called";};
+int main(){
+    CLA a;
+    a.func();
+    return 0;
+}
+
+
+3.To access a class’s static variables. 
+// C++ program to show that :: can be used to access static
+// members when there is a local variable with same name
+#include<iostream>
+using namespace std;
+
+class Test
+{
+    static int x; 
+public:
+    static int y; 
+
+    // Local parameter 'x' hides class member
+    // 'x', but we can access it using ::
+    void func(int x) 
+    { 
+    // We can access class's static variable
+    // even if there is a local variable
+    cout << "Value of static x is " << Test::x;
+
+    cout << "\nValue of local x is " << x; 
+    }
+};
+
+// In C++, static members must be explicitly defined 
+// like this
+int Test::x = 1;
+int Test::y = 2;
+
+int main()
+{
+    Test obj;
+    int x = 3 ;
+    obj.func(x);
+
+    cout << "\nTest::y = " << Test::y;
+
+    return 0;
+}
+
+
+4. In case of multiple Inheritance:
+// Use of scope resolution operator in multiple inheritance.
+#include<iostream>
+using namespace std;
+
+class A
+{
+protected:
+    int x;
+public:
+    A() { x = 10; }
+};
+
+class B
+{
+protected:
+    int x;
+public:
+    B() { x = 20; }
+};
+
+class C: public A, public B
+{
+public:
+void fun()
+{
+    cout << "A's x is " << A::x;
+    cout << "\nB's x is " << B::x;
+}
+};
+
+int main()
+{
+    C c;
+    c.fun();
+    return 0;
+}
+
+-------------------------------#include<bits/stdc++.h>
+using namespace std;
+
+class CLA{
+    public:
+void func();
+};
+void CLA::func() {cout<<"func called";};
+int main(){
+    CLA a;
+    a.func();
+    return 0;
+}
+
+
+
+->Class template
+#include <bits/stdc++.h>
+using namespace std;
+template<class MyType>
+class MyClass{
+    public:
+    MyType first;
+    MyType second;
+    MyClass(MyType f , MyType s){
+        first = f;
+        second = s;
+    }
+};
+int main(){
+    MyClass<string>stringObj("Hello","World");
+    cout << stringObj.first <<" "<<stringObj.second<<"\n";
+    MyClass<int>intObj(4,5);
+    cout<<intObj.first<< " "<<intObj.second<<"\n";
+    return 0;
+}
+

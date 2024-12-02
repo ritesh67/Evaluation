@@ -1,0 +1,141 @@
+Create Table training(
+personal_id number,
+ first_name varchar(60),
+  last_name varchar(40),
+  primary key(personal_id)
+);
+insert into training values
+(1,"anish","pict"),(2,"seth ji","pict"),(3,"CR","SRM ncr"),(4,"ritesh","mit")
+
+
+update training
+Set first_name = "SUDHANSHU"
+WHERE first_name = "CR"
+
+Delete from training where first_name = "SUDHANSHU" AND Insert 
+
+
+->check oracle version
+SQL>select version from v$instance
+
+Creating a user and grant PRIVILIGES
+
+SQL> show con_name
+CON_NAME
+
+CBD$ROOT
+
+SQL> select name,open_mode from v$pdbs
+
+
+Create Table students(
+subject_code int,
+ subject varchar(60),
+   teacher varchar(40),
+  primary key(subject_code)
+);
+
+
+insert into students values
+(100,"music","MR X"),(200,"polso","MRS y"),(300,"cs","MR Z"),(400,"ece","MEEMAW")
+
+
+update training 
+set date = case personal_id
+when 1 then '16/11/2024'
+when 2 then '18/11/2024'
+when 3 then '25/11/2024'
+when 4 then '19/11/2024'
+
+END
+where personal_id IN(1,2,3,4);
+
+
+
+Foreign Key and primary key column names should be same
+
+Alter table Students 
+Rename identitynumber to personal_id	
+
+
+Select*from Training Where personal_id IN(select personal_id from Students where personal_id>1)	
+
+
+
+
+
+
+
+TABLE 1
+
+1) create table training (emp_id int primary key, name varchar, college varchar)
+
+2) insert into training values
+
+  (1,'anish','pict'),(2,'ritesh','mit'),(3,'soham','pict'),(4,'devanshu','srm'),(5,'badri','srm')
+
+3) update training 
+
+set name='cr'
+
+where name='devanshu'
+
+4) delete from training where name='cr'
+
+5) select * from training where college='pict'
+ 
+TABLE 2
+
+1) create table placement (roll_no int primary key , emp_id int , name varchar, college varchar, foreign key(emp_id) references training(emp_id)) 
+
+2) insert into placement values
+
+(10,3,'soham','pict'),(11,1,'anish','pict'),(12,2,'ritesh','mit'),(13,5,'badri','srm')
+
+3) alter table training add join_date date
+
+4) update training 
+
+set join_date = case emp_id
+
+	when 1 then '16/04/2002'
+
+    when 2 then '31/10/2002'
+
+    when 3 then '11/11/2001'
+
+    when 5 then '15/06/2002'
+
+    end
+
+    where emp_id in (1,2,3,5);
+
+5) update training set name='devanshu' where name='badri'
+
+6) alter table placement drop column package
+
+7) alter table add package int
+
+8) update placement set package=case roll_no
+
+when 10 then 6.5 
+
+when 11 then 6 
+
+when 12 then 10
+
+when 13 then 5
+
+end
+
+where roll_no in (10,11,12,13)
+ 
+JOINS:
+
+1) select training.name,training.emp_id from training inner join placement on training.emp_id=placement.emp_id
+
+
+
+
+ON is used in referrential purpose for foreign and primary key 
+ 

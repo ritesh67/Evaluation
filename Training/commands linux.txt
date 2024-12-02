@@ -1,0 +1,36 @@
+press i to go into the insertion mode in the vi editor
+
+clear {remove everything}
+pwd  {writes working directory}
+ls-l
+ls
+cd {jumping to the directory you name }
+mkdir {making directory}
+cat_filename {checking contents readin files}{concatenate}
+touch {for creating empty files}
+rmdir {delete empty directories}
+cd .. {going for previous directory}
+cp filename {used for copying}
+rm {removing files}
+rmdir {removing directories}
+wc {count}
+head {first few lines}
+tail {last few lines}
+more {complete contents of the page}
+less {content with navigatin feature}
+diff {differentiating between different files}
+grep {finding patterns in the different files in a directory eg matching words or figures}
+vi_filename{opening editor in the same file}
+wq {save and quit}
+existing vi {escape shift+:}
+sed 's/word old/word new/g' file name {replacing strings in the file}
+echo {print the content that we pass to it}
+vi filename.sh {create the shell script}
+sh {executing the shell script}
+read name {input}
+interpolation symbol usage $ to get the output  with echo command 
+rm a*p{wildcard characters delete names with a and end with p}
+rm * {delete all files in the directory} 
+ ftp {the command connects a linux computer to a remote server using the ftp protocol. It allows the users to transfer files , manage directories and manage files on the remote system }
+Scp {secure copy protocol is a network protocol . This securely transfers files between linux systems. It uses secure shell (ssh) for secure data transfer and authentication. This is more secure than ftp}
+kill_processid {to kill a certain process}

@@ -1,0 +1,11 @@
+multiple columns can be considered as a key column
+
+Development models Agile 
+Waterfall 
+spiral 
+iterative 
+incremental They follow software development lifecycle 
+Scrum board , burn down chart 
+docker maven
+
+CI/CD 

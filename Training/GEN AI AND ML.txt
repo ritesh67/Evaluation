@@ -1,0 +1,10 @@
+Ai is a branch of technology that works in the filed of automating our work and needs and reduces our work time by doing the tasks efficiently where human intelligence might have taken a lot of time.
+
+Machine Learning is a data learning and analysis model that helps the models to learn and operate . It is a relatively new concept where we get to learn from data and , identify patterns and get the results with minmum to no human intervention.
+Accuracy, automation ,decisions making enhancement , personlization Scalability and security.
+
+disadvantages include data dependency , high computational costs and overfitting and underfitting  
+
+Large Language Models
+
+neural networks are computational models that mimic the anatomy or complex fucntions of a human brain . Consists of interconnected nodes  
