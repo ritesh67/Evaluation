@@ -1,0 +1,188 @@
+#include <iostream>
+#include <vector>
+#include <string>
+#include <limits>  // For numeric_limits
+
+using namespace std;
+
+// Base class for Employee
+class Employee {
+protected:
+    int id;
+    string name;
+    string position;
+    double salary;
+
+public:
+    Employee(int _id, string _name, string _position, double _salary)
+        : id(_id), name(_name), position(_position), salary(_salary) {}
+
+    virtual void display() const {
+        cout << "Employee ID: " << id << endl;
+        cout << "Name: " << name << endl;
+        cout << "Position: " << position << endl;
+        cout << "Salary: $" << salary << endl;
+    }
+
+    virtual void updateDetails() {
+        cout << "Enter updated name: ";
+        cin >> name;
+        cout << "Enter updated position: ";
+        cin >> position;
+        cout << "Enter updated salary: ";
+        cin >> salary;
+    }
+
+    int getID() const {
+        return id;
+    }
+};
+
+// Derived class for Admin functionalities
+class Admin : public Employee {
+private:
+    vector<Employee*> employees;  // Vector stores pointers to Employee objects
+
+public:
+    Admin(int _id, string _name, string _position, double _salary)
+        : Employee(_id, _name, _position, _salary) {}
+
+    void addEmployee(int id, string name, string position, double salary) {
+        Employee* newEmployee = new Employee(id, name, position, salary);
+        employees.push_back(newEmployee);
+    }
+
+    void removeEmployee(int id) {
+        for (auto it = employees.begin(); it != employees.end(); ++it) {
+            if ((*it)->getID() == id) {
+                delete *it;  // Freeing memory
+                employees.erase(it);
+                cout << "Employee with ID " << id << " removed.\n";
+                return;
+            }
+        }
+        cout << "Employee not found.\n";
+    }
+
+    void updateEmployee(int id) {
+        for (auto &emp : employees) {
+            if (emp->getID() == id) {
+                emp->updateDetails();
+                cout << "Employee with ID " << id << " updated.\n";
+                return;
+            }
+        }
+        cout << "Employee not found.\n";
+    }
+
+    void viewEmployees() const {
+        if (employees.empty()) {
+            cout << "No employees to display.\n";
+            return;
+        }
+        for (const auto &emp : employees) {
+            emp->display();  // Calling polymorphic display method
+            cout << "----------------------------------------\n";
+        }
+    }
+
+    ~Admin() {
+        // Clean up dynamically allocated memory
+        for (auto emp : employees) {
+            delete emp;
+        }
+    }
+};
+
+// Function for password login
+bool passwordLogin() {
+    string password;
+    cout << "Enter password to access the system: ";
+    cin >> password;
+
+    if (password == "nostradamus") {
+        return true;
+    } else {
+        cout << "Invalid login.\n";
+        return false;
+    }
+}
+
+// Function to safely read an integer
+bool readInteger(int &input) {
+    cin >> input;
+    if (cin.fail()) {
+        cin.clear(); // clear error flag
+        cin.ignore(numeric_limits<streamsize>::max(), '\n'); // discard invalid input
+        cout << "Invalid input. Please enter a valid integer.\n";
+        return false;
+    }
+    return true;
+}
+
+int main() {
+    // Password authentication
+    if (!passwordLogin()) {
+        return 0;  // Exit the program if login fails
+    }
+
+    Admin admin(1, "Admin", "Administrator", 0.0);  // Admin object
+
+    int choice;
+    do {
+        cout << "\nEmployee Management System\n";
+        cout << "1. Add Employee\n";
+        cout << "2. Remove Employee\n";
+        cout << "3. Update Employee\n";
+        cout << "4. View Employees\n";
+        cout << "5. Exit\n";
+
+        // Input choice and validate it
+        cout << "Enter your choice: ";
+        while (!readInteger(choice)) {
+            cout << "Enter a valid choice: ";
+        }
+
+        switch (choice) {
+            case 1: {
+                int id;
+                string name, position;
+                double salary;
+                cout << "Enter employee ID: ";
+                cin >> id;
+                cout << "Enter employee name: ";
+                cin >> name;
+                cout << "Enter employee position: ";
+                cin >> position;
+                cout << "Enter employee salary: ";
+                cin >> salary;
+                admin.addEmployee(id, name, position, salary);
+                break;
+            }
+            case 2: {
+                int id;
+                cout << "Enter employee ID to remove: ";
+                cin >> id;
+                admin.removeEmployee(id);
+                break;
+            }
+            case 3: {
+                int id;
+                cout << "Enter employee ID to update: ";
+                cin >> id;
+                admin.updateEmployee(id);
+                break;
+            }
+            case 4:
+                admin.viewEmployees();
+                break;
+            case 5:
+                cout << "Exiting the system...\n";
+                break;
+            default:
+                cout << "Invalid choice, please try again.\n";
+        }
+    } while (choice != 5);
+
+    return 0;
+}
